@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 import { View, Text, Image, StyleSheet, ScrollView } from "react-native";
+=======
+import { View, Text, Image, StyleSheet } from "react-native";
+>>>>>>> 4eec5c5b471f79168f20f80f25b5b27f8742fc04
 import MealDetails from "../components/MealDetails";
 import Subtitle from "../components/MealDetail/Subtitle";
 import { MEALS } from "../data/dummy-data";
 import List from "../components/MealDetail/List";
+<<<<<<< HEAD
 import { useContext, useLayoutEffect } from "react";
 import IconButton from "../components/IconButton";
 import { FavouriteContext } from "../store/context/favourites-context";
@@ -10,10 +15,15 @@ import { FavouriteContext } from "../store/context/favourites-context";
 function MealsDetailScreen({ route, navigation }) {
   const favouriteMealCtx = useContext(FavouriteContext);
 
+=======
+
+function MealsDetailScreen({ route }) {
+>>>>>>> 4eec5c5b471f79168f20f80f25b5b27f8742fc04
   const mealId = route.params.mealId;
 
   const selectedMeal = MEALS.find((meal) => meal.id === mealId);
 
+<<<<<<< HEAD
   const mealIsFavourite = favouriteMealCtx.ids.includes(mealId);
 
   function changeFavouriteStatusHandler() {
@@ -42,6 +52,10 @@ function MealsDetailScreen({ route, navigation }) {
 
   return (
     <ScrollView style={styles.rootContainer}>
+=======
+  return (
+    <View>
+>>>>>>> 4eec5c5b471f79168f20f80f25b5b27f8742fc04
       <Image style={styles.image} source={{ uri: selectedMeal.imageUrl }} />
       <Text style={styles.title}>{selectedMeal.title}</Text>
       <MealDetails
@@ -50,6 +64,7 @@ function MealsDetailScreen({ route, navigation }) {
         affordability={selectedMeal.affordability}
         textStyle={styles.detailText}
       />
+<<<<<<< HEAD
       <View style={styles.listOuterContainer}>
         <View style={styles.listContainer}>
           <Subtitle>Ingredients</Subtitle>
@@ -59,15 +74,25 @@ function MealsDetailScreen({ route, navigation }) {
         </View>
       </View>
     </ScrollView>
+=======
+      <Subtitle>Ingredients</Subtitle>
+      <List data={selectedMeal.ingredients} />
+      <Subtitle>Steps</Subtitle>
+      <List data={selectedMeal.ingredients} />
+    </View>
+>>>>>>> 4eec5c5b471f79168f20f80f25b5b27f8742fc04
   );
 }
 
 export default MealsDetailScreen;
 
 const styles = StyleSheet.create({
+<<<<<<< HEAD
   rootContainer: {
     marginBottom: 32,
   },
+=======
+>>>>>>> 4eec5c5b471f79168f20f80f25b5b27f8742fc04
   image: {
     height: 350,
     width: "100%",
@@ -82,10 +107,13 @@ const styles = StyleSheet.create({
   detailText: {
     color: "white",
   },
+<<<<<<< HEAD
   listContainer: {
     width: "80%",
   },
   listOuterContainer: {
     alignItems: "center",
   },
+=======
+>>>>>>> 4eec5c5b471f79168f20f80f25b5b27f8742fc04
 });

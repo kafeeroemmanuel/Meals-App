@@ -21,7 +21,11 @@ const styles = StyleSheet.create({
     borderBottomColor: "white",
     borderBottomWidth: 2,
     padding: 6,
+<<<<<<< HEAD
     marginHorizontal: 12,
+=======
+    marginHorizontal: 24,
+>>>>>>> 4eec5c5b471f79168f20f80f25b5b27f8742fc04
     marginVertical: 4,
   },
 });
